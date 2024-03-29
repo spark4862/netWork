@@ -1,5 +1,5 @@
-如何实现tcp
-+ message报文 segment报文段 packet分组 ip datagram数据报 frame帧 bit
+# TCP, 网络层接口，路由器转发功能实现
+
 + 为什么要做这个项目
   + 加深对TCP网络协议的理解
   + 训练编程能力
@@ -14,20 +14,7 @@
     + 计时器逻辑，重传逻辑的实现
 + 网络层到链路层接口的实现
 + 路由器转发功能实现
-
-+ 遇到的困难
-  + 如何设计更好的数据结构来提升效率
-  + 在streambyte中，需要消除拷贝，实现延迟更改
-  + 在查找时，使用set来代替queue，使用emplace_hint实现高效率插入
-  + 使用桶和哈希来实现最长前缀匹配
-
-+ 收获
-  + tcp详细了解，书本上只有tcp相关的概念，只有实现tcp才能对tcp的细节有一个深入了解
-  + 了解了linux发送TCP报文段的几种方法，如使用UDP发送，使用虚拟TUN设备发送。
-  + clang-format
-  + clang-tidy
-  + addressSan
-
+  + 由转发表，带缓存异步接口组成
 
 + 如何运行
   + To set up the build system: `cmake -S . -B build`
